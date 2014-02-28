@@ -12,9 +12,20 @@ table {
 	margin:    10px auto 0 auto;
 	max-width: 800px;
 }
+
 tr {
 	cursor: pointer;
 }
+
+tr.playing > td:first-child:before {
+	position: relative;
+	float: left;
+	width: 0;
+	right: 35px;
+	content: "\e072";
+	font-family: 'Glyphicons Halflings';
+}
+
 span.mejs-time-float {
 	top:         -15px !important;
 	margin-left: -24px !important;

@@ -36,7 +36,11 @@ $(document).ready(function() {
 		var audio  = $('audio'),
 		    tracks = $('tr'),
 		    first   = $('a.download', tracks[1]); // Autoplay first track
+
+		// Mark first track as playing
 		audio.attr('src', first.attr('href'));
+		tracks.eq(1).addClass('playing');
+
 		window.player = new MediaElementPlayer('audio', {
 			audioWidth:     500,
 			success:        function(m) {
@@ -63,6 +67,10 @@ $(document).ready(function() {
 					window.player.setCurrentTime(st);
 				}, 100);
 			} else window.player.play();
+
+			// Mark appropriate entry as 'playing'
+			$('tr').removeClass('playing');
+			$(this).addClass('playing');
 		});
 	});
 });
