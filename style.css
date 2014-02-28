@@ -1,8 +1,13 @@
 /* All Mod Cons archive webpage stylesheet | Seon-Wook Park | CC BY-NC-SA */
 span.player {
-	margin: 5px 0;
+	margin: 10px;
 	float:  right;
 }
+
+span.player div.mejs-controls {
+	background: #222 !important;
+}
+
 table {
 	margin:    10px auto 0 auto;
 	max-width: 800px;

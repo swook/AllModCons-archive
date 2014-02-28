@@ -19,7 +19,7 @@ $(document).ready(function() {
 			table.append('<tr>'+
 				'<td title="'+e[2].split(" ")[0]+'">'+e[0]+'</td>'+
 				'<td>'+(e.length >= 2 ? e[1] : '')+'</td>'+
-				'<td>'+(e.length >= 3 ? '<a class="download" href="'+e[2]+'" starttime="'+st+'"><i class="icon-download"></i> MP3</a>' : '')+'</td>');
+				'<td>'+(e.length >= 3 ? '<a class="download glyphicon glyphicon-download" href="'+e[2]+'" starttime="'+st+'"> MP3</a>' : '')+'</td>');
 		});
 
 		// Setup tablesorter
