@@ -26,7 +26,7 @@ $(document).ready(function() {
 		table.tablesorter({
 			textExtraction : function(node) {
 				var $node = $(node),
-					title = $node.attr('title');
+				    title = $node.attr('title');
 				if (title > "") return title;
 				return $node.html();
 			},
@@ -35,15 +35,15 @@ $(document).ready(function() {
 		// Setup MediaElementPlayer
 		var audio  = $('audio'),
 		    tracks = $('tr'),
-		    first   = $('a.download', tracks[1]); // Autoplay first track
+		    first  = $('a.download', tracks[1]); // Autoplay first track
 
 		// Mark first track as playing
 		audio.attr('src', first.attr('href'));
 		tracks.eq(1).addClass('playing');
 
 		window.player = new MediaElementPlayer('audio', {
-			audioWidth:     500,
-			success:        function(m) {
+			audioWidth: 500,
+			success:    function(m) {
 				// Change play position of autoplay-ed track accordingly
 				setTimeout(function() {
 					m.play();
